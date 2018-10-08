@@ -1,0 +1,82 @@
+.p01{
+  display: grid;
+  grid-template-columns:20% auto 160px;
+  grid-auto-rows:minmax(120px, auto);
+  max-width:1140px;
+  height: auto;
+  grid-gap:1em;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.box1{
+  background-color: #ffccb3;
+  grid-column: 1/4;
+  grid-area: box1
+}
+.box2{
+  background-color: #d9f2d9;
+  grid-row: 1/2;
+  grid-area: box2
+}
+.box3{
+  background-color: #ffffb3;
+  grid-row: 2/3;
+  grid-area: box3
+}
+.box4{
+  background-color: #b3d9ff;
+  grid-row: 3/4;
+  grid-area: box4
+}
+.box5{
+  background-color: #f2d9e6;
+  grid-column: 1/4;
+  grid-area: box5
+}
+
+@media(min-width:700px){
+  .p01{
+    grid-template-areas:
+    "box1 box1 box1"
+    "box2 box3 box4"
+    "box2 box3 box4"
+    "box5 box5 box5";
+  }
+}
+@media(max-width:700px){
+  .p01{
+    grid-template-rows: repeat(6 120px);
+    grid-template-areas:
+    "box1 box1 box1"
+    "box2 box2 box2"
+    "box3 box3 box3"
+    "box3 box3 box3"
+    "box4 box4 box4"
+    "box5 box5 box5";
+  }
+}
+
+
+
+
+/*
+grid-gap:1em;
+grid-column-gap:1em;
+grid-row-gap:1em;
+distancias entre cuadrados
+/*
+
+/*
+grid-template-columns:(3, 1fr);
+grid-template-columns: 70% 30%;
+cuadrados en torno a la medida general
+/*
+/*
+grid-auto-rows: minmax(70px, auto)
+grid-auto-row:70px;
+texto no llene el cuadrado
+/*
+/*
+justify-item:start; center end
+justificar la caja a un  lado
